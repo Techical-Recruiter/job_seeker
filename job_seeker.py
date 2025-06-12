@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-st.set_page_config(page_title="CV Ranker - Job Seeker")
+st.set_page_config(page_title="CV Analyzer & Career Coach")
 
 def input_text(uploaded_file):
     file_name = uploaded_file.name.lower()
