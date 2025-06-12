@@ -180,7 +180,7 @@ async def analyze_resume_job_seeker(uploaded_file, jd):
 
 # Job Seeker App UI
 def job_seeker_app():
-    st.title("CV Ranker - Job Seeker Dashboard")
+    st.title("CV Analyzer & Career Coach")
     st.markdown("**Powered by PakistanRecruitment**", unsafe_allow_html=True)
     st.write("Welcome!")
 
