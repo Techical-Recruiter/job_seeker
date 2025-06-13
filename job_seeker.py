@@ -199,7 +199,7 @@ def display_pakistan_recruitment_promo():
                 🔗 <a href="https://www.linkedin.com/company/pakistanrecruitment/posts/?feedView=all" target="_blank" style="color:#0A66C2; text-decoration:none; font-weight:bold;">Connect with us on LinkedIn</a>
             </p>
             <p style="font-size:0.9em; color:#6c757d;">
-                *Your gateway to success in Pakistan's job market.*
+                *Your gateway to success in Global job market.*
             </p>
         </div>
         """,
