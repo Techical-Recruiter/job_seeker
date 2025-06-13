@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-st.set_page_config(page_title="CV Analyzer & Career Coach")
+st.set_page_config(page_title="CV Ranker - Job Seeker")
 
 def input_text(uploaded_file):
     file_name = uploaded_file.name.lower()
@@ -178,7 +178,34 @@ async def analyze_resume_job_seeker(uploaded_file, jd):
         st.error(f"Server error: {str(e)}. Please try again later.")
         return False
 
-# Job Seeker App UI
+def display_pakistan_recruitment_promo():
+    st.markdown("---") 
+    st.markdown(
+        """
+        <div style="background-color:#f0f2f6; padding:20px; border-radius:10px; text-align:center;">
+            <h3 style="color:#0056b3;">Elevate Your Career with PakistanRecruitment!</h3>
+            <p>
+                We hope this analysis helps you on your job-seeking journey.
+                For more career opportunities, expert advice, and to connect with top employers,
+                join the PakistanRecruitment community!
+            </p>
+            <p>
+                🌐 <a href="https://pakistanrecruitment.com/" target="_blank" style="color:#007bff; text-decoration:none; font-weight:bold;">Visit Our Website</a>
+            </p>
+            <p>
+                📱 <a href="https://whatsapp.com/channel/0029Vawltbj7z4kbLbGxSY35" target="_blank" style="color:#25D366; text-decoration:none; font-weight:bold;">Join Our WhatsApp Broadcast Channel</a>
+            </p>
+            <p>
+                🔗 <a href="https://www.linkedin.com/company/pakistanrecruitment/posts/?feedView=all" target="_blank" style="color:#0A66C2; text-decoration:none; font-weight:bold;">Connect with us on LinkedIn</a>
+            </p>
+            <p style="font-size:0.9em; color:#6c757d;">
+                *Your gateway to success in Pakistan's job market.*
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
 def job_seeker_app():
     st.title("CV Analyzer & Career Coach")
     st.markdown("**Powered by PakistanRecruitment**", unsafe_allow_html=True)
@@ -188,8 +215,9 @@ def job_seeker_app():
     st.markdown('''
         **How to use:**
         1. Upload your resume in PDF, MS Word (.doc, .docx) format.
-        2. Paste the job description in the text area.
-        3. Click Submit to analyze.
+        2. Paste the job description of role you want to apply for and see your compatibility with the job.
+        3. Get a clear match score, see what's missing in your resume, and receive career advice to improve your chances for AI-related roles.
+        4. Click Submit to analyze.
     ''')
 
     upload_file = st.file_uploader("Upload your resume", type=["pdf", "doc", "docx"],
@@ -205,6 +233,9 @@ def job_seeker_app():
             st.error("Please provide a job description to analyze the resume.")
         else:
             asyncio.run(analyze_resume_job_seeker(upload_file, jd))
+
+    # Call the promotional section at the very end
+    display_pakistan_recruitment_promo()
 
 if __name__ == "__main__":
     job_seeker_app()
