@@ -183,11 +183,11 @@ def display_pakistan_recruitment_promo():
     st.markdown(
         """
         <div style="background-color:#f0f2f6; padding:20px; border-radius:10px; text-align:center;">
-            <h3 style="color:#0056b3;">Elevate Your Career with PakistanRecruitment!</h3>
+            <h3 style="color:#0056b3;">Elevate Your Career with PakistanRecruitment.com!</h3>
             <p>
                 We hope this analysis helps you on your job-seeking journey.
                 For more career opportunities, expert advice, and to connect with top employers,
-                join the PakistanRecruitment community!
+                join the PakistanRecruitment.com community!
             </p>
             <p>
                 🌐 <a href="https://pakistanrecruitment.com/" target="_blank" style="color:#007bff; text-decoration:none; font-weight:bold;">Visit Our Website</a>
@@ -208,7 +208,7 @@ def display_pakistan_recruitment_promo():
 
 def job_seeker_app():
     st.title("CV Analyzer & Career Coach")
-    st.markdown("**Powered by PakistanRecruitment**", unsafe_allow_html=True)
+    st.markdown('**Powered by <a href="https://pakistanrecruitment.com/">PakistanRecruitment.com</a>**', unsafe_allow_html=True)
     st.write("Welcome!")
 
     st.header("Match your CV with any Job Post in seconds.", divider="grey")
