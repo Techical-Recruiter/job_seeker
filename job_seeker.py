@@ -216,7 +216,7 @@ def job_seeker_app():
         **How to use:**
         1. Upload your resume in PDF, MS Word (.doc, .docx) format.
         2. Paste the job description of role you want to apply for and see your compatibility with the job.
-        3. Get a clear match score, see what's missing in your resume, and receive career advice to improve your chances for AI-related roles.
+        3. Get a clear match score, see what's missing in your resume, and receive career advice to improve your chances for landing a global job.
         4. Click Submit to analyze.
     ''')
 
